@@ -93,7 +93,8 @@ Page({
     this.setData({
       shopType: "addShopCar"
     })
-    this.bindGuiGeTap();
+    // this.bindGuiGeTap();
+    this.addShopCar();
   },
   tobuy: function () {
     this.setData({
@@ -218,25 +219,6 @@ Page({
   * 加入购物车
   */
   addShopCar:function(){
-    if (this.data.goodsDetail.properties && !this.data.canSubmit) {
-      if (!this.data.canSubmit){
-        wx.showModal({
-          title: '提示',
-          content: '请选择商品规格！',
-          showCancel: false
-        })       
-      }
-      this.bindGuiGeTap();
-      return;
-    }
-    if(this.data.buyNumber < 1){
-      wx.showModal({
-        title: '提示',
-        content: '购买数量不能为0！',
-        showCancel:false
-      })
-      return;
-    }
     //组建购物车
     var shopCarInfo = this.bulidShopCarInfo();
 
@@ -252,7 +234,7 @@ Page({
     })
     this.closePopupTap();
     wx.showToast({
-      title: '加入购物车成功',
+      title: '加入收藏夹成功',
       icon: 'success',
       duration: 2000
     })

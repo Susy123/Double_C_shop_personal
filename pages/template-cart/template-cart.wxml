@@ -23,11 +23,11 @@
                     <view class="text-box">
                         <view class="goods-title">{{item.name}}</view>
                         <view class="goods-label">{{item.label}}</view>
-                        <view class="goods-price">¥ {{item.price}}</view>
-                        <view class="buy-num">
-                            <view class="jian-btn {{item.number==1? 'disabled' : ''}}" catchtap="jianBtnTap" data-index="{{index}}">-</view>
-                            <input  type="number" value="{{item.number}}" disabled/>
-                            <view class="jia-btn {{item.number==10? 'disabled' : ''}}" catchtap="jiaBtnTap" data-index="{{index}}">+</view>
+                        <view class="goods-price" hidden='{{item.price}}==0'>¥ {{item.price}}</view>
+                        <view class="buy-num"  hidden='{{item.price}}==0'>
+                            <view  hidden='{{item.price}}==0' class="jian-btn {{item.number==1? 'disabled' : ''}}" catchtap="jianBtnTap" data-index="{{index}}">-</view>
+                            <input  hidden='{{item.price}}==0'  type="number" value="{{item.number}}" disabled/>
+                            <view  hidden='{{item.price}}==0' class="jia-btn {{item.number==10? 'disabled' : ''}}" catchtap="jiaBtnTap" data-index="{{index}}">+</view>
                         </view>
                     </view>
                 </view>
@@ -40,7 +40,7 @@
     <view class="jiesuan-box">
         <view class="left-price">
             <view class="all-selected  {{allSelect?'active':''}}" bindtap="bindAllSelect">全选</view>
-            <view class="total" hidden="{{noSelect}}">合计：¥ {{totalPrice}}</view>
+            <view class="total" hidden="{{noSelect}}||{{totalPrice}}==0">合计：¥ {{totalPrice}}</view>
         </view>
         <view class="to-pay-btn {{noSelect?'no-select':''}}" hidden="True" bindtap="toPayOrder">去结算</view>
         <button open-type="contact"  class="to-pay-btn"  hidden="{{!saveHidden}}">咨询客服</button>

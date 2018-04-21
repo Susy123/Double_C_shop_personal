@@ -152,7 +152,7 @@ swiper-item image {
   padding-left: 10rpx;
   font-size: 26rpx;
   overflow: hidden;
-  color: #e64340;
+  color: #293539;
   width: 635rpx;
   height: 50rpx;
   line-height: 50rpx;

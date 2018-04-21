@@ -14,9 +14,9 @@
       <view class="bd">
          <text class='confirm-text'>追逐花季，收获琼浆。</text>
         <view class="confirm-btn" bindtap='goToIndex'>
-          <text >进入店铺</text>
+          <text >进入</text>
         </view>
-        <text class="copyright">@小熊家的蜜蜜</text>
+        <text class="copyright">@double-c</text>
       </view>
     </view>
   </block>

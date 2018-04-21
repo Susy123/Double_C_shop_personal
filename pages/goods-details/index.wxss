@@ -135,10 +135,15 @@ swiper-item image {
 }
 .goods-text{
   padding: 0 10rpx;
-  font-size:28rpx;
-  color:#666666;
-  line-height: 56rpx;
+  color:#293539;
+font-size:28rpx;
+line-height:60rpx;
+font-weight:300;
   margin-bottom: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 .des-imgs{
   width:100%;

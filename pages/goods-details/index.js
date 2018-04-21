@@ -34,6 +34,10 @@ Page({
     })  
   },
   onLoad: function (e) {
+    var that = this
+    wx.setNavigationBarTitle({
+      title: wx.getStorageSync('mallName')
+    })
     if (e.inviter_id) {
       wx.setStorage({
         key: 'inviter_id_' + e.id,
